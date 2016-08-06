@@ -11,11 +11,13 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faraday'
 gem 'vcr'
+gem 'webmock'
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'byebug'
 end
 
 group :development do

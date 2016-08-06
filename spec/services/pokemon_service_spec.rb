@@ -6,9 +6,9 @@ describe PokemonService do
       VCR.use_cassette("151 pokemon") do
         pokemon = PokemonService.new.get_pokemon
 
-        expect(pokemon.count).to eq(151)
-        expect(pokemon.first).to eq("Bulbasaur")
-        expect(pokemon.last).to eq("Mew")
+        expect(pokemon["results"].count).to eq(151)
+        expect(pokemon["results"].first["name"]).to eq("bulbasaur")
+        expect(pokemon["results"].last["name"]).to eq("mew")
       end
     end
   end
